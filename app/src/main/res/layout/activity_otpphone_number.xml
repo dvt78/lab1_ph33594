@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".OTPphoneNumberActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_gravity="start"
+        android:text="Số điện thoại:"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/edtPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/custom_edt"
+        android:hint="Nhập sđt"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btnGetOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gửi OTP"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:backgroundTint="#ff9800"
+        android:layout_marginTop="18dp"
+        app:cornerRadius="7dp"
+        app:strokeWidth="1.5dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_gravity="start"
+        android:text="OTP:"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/edtOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/custom_edt"
+        android:hint="Nhập OTP"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btnOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhập OTP"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:backgroundTint="#ff9800"
+        android:layout_marginTop="18dp"
+        app:cornerRadius="7dp"
+        app:strokeWidth="1.5dp" />
+
+</LinearLayout>
