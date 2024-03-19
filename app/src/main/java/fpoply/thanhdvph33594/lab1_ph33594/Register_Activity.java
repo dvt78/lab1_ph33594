@@ -25,16 +25,16 @@ public class Register_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         mAuth=FirebaseAuth.getInstance();
-         edtUser =findViewById(R.id.edtUsernameRegis);
-         edtPassWord =findViewById(R.id.edtPasswordRegis);
-         edtRetypePasswordRegisr =findViewById(R.id.edtRetypePasswordRegis);
-         btnRegister = findViewById(R.id.btnRegis);
-         btnRegister.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 register();
-             }
-         });
+        edtUser =findViewById(R.id.edtUsernameRegis);
+        edtPassWord =findViewById(R.id.edtPasswordRegis);
+        edtRetypePasswordRegisr =findViewById(R.id.edtRetypePasswordRegis);
+        btnRegister = findViewById(R.id.btnRegis);
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                register();
+            }
+        });
     }
 
     private void register() {
@@ -56,6 +56,8 @@ public class Register_Activity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Tạo tài khoản thành công",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(Register_Activity.this, Login_Activity.class);
                     startActivity(intent);
+                }else if(pass.length() >= 6){
+                    Toast.makeText(getApplicationContext(),"Mật khẩu phải có ít nhất 6 ký tự ",Toast.LENGTH_LONG).show();
                 }else{
                     Toast.makeText(getApplicationContext(),"Tạo tài khoản không thành công",Toast.LENGTH_LONG).show();
                 }
